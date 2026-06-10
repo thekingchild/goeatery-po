@@ -3,29 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoEatery - Restaurant POS, Orders, Reservations & Reports</title>
     <meta
       name="description"
-      content="GoEatery helps restaurants, cafes, and bars manage POS, orders, menus, tables, staff, payments, reservations, and reports in one calm workspace."
+      content="GoEatery is an all-in-one cloud platform for restaurants, bars, cafes, lounges, and food businesses. Manage POS, orders, menus, reservations, kitchen tickets, inventory, staff, payments, and reports."
     />
-    <title>GoEatery - Restaurant Operations Software</title>
+    <meta name="theme-color" content="#102220" />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ff5a42'/%3E%3Cpath d='M12 34C14 20 22 13 32 13s18 7 20 21H12Z' fill='white'/%3E%3Cpath d='M18 38h28a5 5 0 0 1 0 10H18a5 5 0 0 1 0-10Z' fill='white'/%3E%3Cpath d='M30 8h4v7h-4z' fill='white'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ff6b35'/%3E%3Cpath d='M12 34C14 20 22 13 32 13s18 7 20 21H12Z' fill='white'/%3E%3Cpath d='M18 38h28a5 5 0 0 1 0 10H18a5 5 0 0 1 0-10Z' fill='white'/%3E%3Cpath d='M30 8h4v7h-4z' fill='white'/%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
+    <header class="site-header" data-nav>
+      <div class="site-header-inner section-shell">
         <a class="brand" href="#top" aria-label="GoEatery home">
-          <span class="brand-mark">
-            <svg viewBox="0 0 32 32" aria-hidden="true">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
               <path d="M4 17.5C4.7 10.5 9.4 6 16 6s11.3 4.5 12 11.5H4Z" />
               <path d="M8 19h16c1.2 0 2.2 1 2.2 2.2S25.2 23.4 24 23.4H8c-1.2 0-2.2-1-2.2-2.2S6.8 19 8 19Z" />
               <path d="M15 3.8h2v3h-2z" />
@@ -33,51 +34,48 @@
           </span>
           <span>GoEatery</span>
         </a>
-
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
         <nav class="nav-links" aria-label="Primary navigation">
           <a href="#features">Features</a>
+          <a href="#modules">Modules</a>
           <a href="#pricing">Pricing</a>
-          <a href="#faqs">FAQs</a>
-          <a href="#resources">Resources</a>
+          <a href="#faq">FAQs</a>
+          <a href="#contact">Contact</a>
         </nav>
+        <a class="header-cta" href="#pricing">Start Free Trial</a>
+      </div>
+    </header>
 
-        <div class="nav-actions">
-          <a class="phone-link" href="https://wa.me/2347031010500">
-            <span></span>
-            +234 703 101 0500
-          </a>
-          <a class="signin" href="#">Sign In</a>
-          <a class="button button-primary button-small" href="#pricing">Start Free Trial</a>
-        </div>
-      </header>
-
-      <main id="top">
-        <section class="hero-section section-pad">
-          <div class="glow-field glow-left" aria-hidden="true"></div>
-          <div class="glow-field glow-right" aria-hidden="true"></div>
-
-          <div class="hero-copy reveal">
-            <h1>Restaurant operations, <span>beautifully</span> under control</h1>
-            <p>
-              Manage orders, menus, tables, staff, payments, and reports in one calm workspace
-              so you can deliver unforgettable dining experiences.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#pricing">Start Free Trial</a>
-              <a class="button button-ghost" href="https://demo.goeatery.ng">View Demo</a>
-            </div>
-            <div class="promise-row" aria-label="Trial details">
-              <span>15-day free trial</span>
-              <span>No card required</span>
-              <span>Cancel anytime</span>
-            </div>
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <div class="hero-brandline">
+            <span>Cloud restaurant management for modern food businesses</span>
           </div>
+          <h1>Run your restaurant, bar, cafe, or lounge from one beautiful workspace</h1>
+          <p>
+            GoEatery brings POS, online ordering, QR menus, reservations, kitchen tickets,
+            inventory, staff access, payments, and reports into a single calm operating system.
+          </p>
+          <div class="hero-actions" aria-label="Hero actions">
+            <a class="button button-dark" href="#pricing">Start Free Trial</a>
+            <a class="button button-soft" href="https://demo.goeatery.ng">View Demo</a>
+          </div>
+          <div class="hero-rating" aria-label="GoEatery highlights">
+            <span class="stars">★★★★★</span>
+            <span>Built for dine-in, pickup, delivery, reservations, and multi-location teams</span>
+          </div>
+        </div>
 
-          <div class="dashboard-frame reveal delay-1" aria-label="GoEatery product dashboard preview">
-            <aside class="dashboard-sidebar">
-              <div class="mini-brand">
-                <span class="brand-mark tiny">
-                  <svg viewBox="0 0 32 32" aria-hidden="true">
+        <figure class="hero-product" aria-label="GoEatery dashboard preview">
+          <div class="dashboard-shell">
+            <aside class="mock-sidebar">
+              <div class="sidebar-logo">
+                <span class="brand-mark mini" aria-hidden="true">
+                  <svg viewBox="0 0 32 32">
                     <path d="M4 17.5C4.7 10.5 9.4 6 16 6s11.3 4.5 12 11.5H4Z" />
                     <path d="M8 19h16c1.2 0 2.2 1 2.2 2.2S25.2 23.4 24 23.4H8c-1.2 0-2.2-1-2.2-2.2S6.8 19 8 19Z" />
                     <path d="M15 3.8h2v3h-2z" />
@@ -85,480 +83,458 @@
                 </span>
                 GoEatery
               </div>
-              <a class="side-item active" href="#">Overview</a>
-              <a class="side-item" href="#">Orders</a>
-              <a class="side-item" href="#">POS</a>
-              <a class="side-item" href="#">Menu</a>
-              <a class="side-item" href="#">Tables</a>
-              <a class="side-item" href="#">KOT</a>
-              <a class="side-item" href="#">Reports</a>
+              <span class="selected">Dashboard</span>
+              <span>POS Orders</span>
+              <span>Reservations</span>
+              <span>Kitchen Tickets</span>
+              <span>Inventory</span>
+              <span>Reports</span>
+              <span>Settings</span>
             </aside>
-
-            <div class="dashboard-main">
-              <div class="dashboard-topbar">
-                <button>Main Branch</button>
-                <label>
-                  <span class="sr-only">Search dashboard</span>
-                  <input type="search" value="Search anything..." aria-label="Search dashboard" />
-                </label>
-                <div class="avatar-group">
-                  <span></span>
-                  <span></span>
-                  <strong>TA</strong>
+            <div class="mock-main">
+              <div class="mock-topbar">
+                <strong>Dashboard / overview</strong>
+                <div>
+                  <button>Main Branch</button>
+                  <button>Today</button>
                 </div>
               </div>
-
-              <div class="metrics-grid">
-                <article class="metric-card tomato">
-                  <span>Today's Sales</span>
+              <div class="metric-row">
+                <article>
+                  <span class="metric-icon tomato">◒</span>
+                  <small>Today's sales</small>
                   <strong>₦862,450</strong>
-                  <small>+18.6%</small>
+                  <em>▲ 18.6% vs yesterday</em>
                 </article>
-                <article class="metric-card citrus">
-                  <span>Orders</span>
+                <article>
+                  <span class="metric-icon yellow">▤</span>
+                  <small>Open orders</small>
                   <strong>132</strong>
-                  <small>+12.4%</small>
+                  <em>▲ 12.4% active flow</em>
                 </article>
-                <article class="metric-card mint">
-                  <span>Avg. Order Value</span>
-                  <strong>₦6,540</strong>
-                  <small>+8.1%</small>
+                <article>
+                  <span class="metric-icon mint">◉</span>
+                  <small>Payments</small>
+                  <strong>₦711,894</strong>
+                  <em>▲ 8.7% collected</em>
                 </article>
-                <article class="metric-card violet">
-                  <span>New Customers</span>
+                <article>
+                  <span class="metric-icon rose">◎</span>
+                  <small>Reservations</small>
                   <strong>28</strong>
-                  <small>+15.1%</small>
+                  <em>▲ 10.1% booked</em>
                 </article>
               </div>
-
-              <div class="dashboard-content">
-                <section class="orders-panel">
-                  <div class="panel-heading">
-                    <h2>Recent Orders</h2>
-                    <a href="#">View all</a>
+              <div class="dashboard-lower">
+                <section class="chart-card">
+                  <div class="panel-head">
+                    <h2>Sales Last 7 Days</h2>
+                    <span>All channels</span>
                   </div>
-                  <div class="order-table" role="table" aria-label="Recent restaurant orders">
-                    <div role="row" class="table-head">
-                      <span>Order ID</span>
-                      <span>Type</span>
-                      <span>Customer</span>
-                      <span>Amount</span>
-                      <span>Status</span>
-                    </div>
-                    <div role="row">
-                      <span>#ORD-1293</span>
-                      <span class="chip green">Dine in</span>
-                      <span>Tosin Adewale</span>
-                      <span>₦24,100</span>
-                      <span class="status done">Completed</span>
-                    </div>
-                    <div role="row">
-                      <span>#ORD-1292</span>
-                      <span class="chip red">Delivery</span>
-                      <span>Ifeyinwa Nwosu</span>
-                      <span>₦18,200</span>
-                      <span class="status pending">In progress</span>
-                    </div>
-                    <div role="row">
-                      <span>#ORD-1291</span>
-                      <span class="chip yellow">Pick up</span>
-                      <span>Chinedu Okafor</span>
-                      <span>₦9,800</span>
-                      <span class="status ready">Ready</span>
-                    </div>
-                    <div role="row">
-                      <span>#ORD-1290</span>
-                      <span class="chip violet">Reservation</span>
-                      <span>Bola Johnson</span>
-                      <span>₦85,750</span>
-                      <span class="status seated">Seated</span>
-                    </div>
+                  <div class="chart-bars" aria-hidden="true">
+                    <i style="--h: 42%"></i>
+                    <i style="--h: 54%"></i>
+                    <i style="--h: 47%"></i>
+                    <i style="--h: 68%"></i>
+                    <i style="--h: 58%"></i>
+                    <i style="--h: 82%"></i>
+                    <i style="--h: 96%"></i>
+                  </div>
+                  <div class="order-table">
+                    <div><span>#ORD-1293</span><em class="done">Dine in</em><strong>₦24,100</strong></div>
+                    <div><span>#ORD-1292</span><em class="pending">Delivery</em><strong>₦18,200</strong></div>
+                    <div><span>#ORD-1291</span><em class="ready">Pick up</em><strong>₦9,800</strong></div>
                   </div>
                 </section>
-
-                <section class="chart-panel">
-                  <div class="panel-heading">
-                    <h2>Sales Trend</h2>
-                    <span>This week</span>
+                <section class="summary-card">
+                  <h2>Kitchen flow</h2>
+                  <div class="summary-line">
+                    <span class="metric-icon tomato">1</span>
+                    <p><strong>New KOT</strong><small>Table 12 · Jollof rice, grilled chicken</small></p>
+                    <b>12:45</b>
                   </div>
-                  <div class="line-chart" aria-hidden="true">
-                    <span style="--h: 34%"></span>
-                    <span style="--h: 45%"></span>
-                    <span style="--h: 39%"></span>
-                    <span style="--h: 58%"></span>
-                    <span style="--h: 51%"></span>
-                    <span style="--h: 72%"></span>
-                    <span style="--h: 88%"></span>
+                  <div class="summary-line">
+                    <span class="metric-icon yellow">2</span>
+                    <p><strong>Preparing</strong><small>Delivery · Pepper soup, zobo</small></p>
+                    <b>13:05</b>
                   </div>
-                  <div class="best-sellers">
-                    <h3>Top selling items</h3>
-                    <p>Jollof Rice <strong>128</strong></p>
-                    <p>Grilled Chicken <strong>96</strong></p>
-                    <p>Pepper Soup <strong>72</strong></p>
+                  <div class="summary-line">
+                    <span class="metric-icon mint">3</span>
+                    <p><strong>Ready</strong><small>Pickup · Fried rice family pack</small></p>
+                    <b>13:12</b>
                   </div>
+                  <a href="#features">View kitchen tickets</a>
                 </section>
               </div>
             </div>
           </div>
-        </section>
+        </figure>
+      </section>
 
-        <section class="proof-strip reveal" aria-label="GoEatery results and trusted brands">
-          <p>Trusted by restaurants and bars across Nigeria</p>
-          <div class="proof-stat">
-            <strong>2,951+</strong>
-            <span>Active users</span>
-          </div>
-          <div class="proof-stat">
-            <strong>850+</strong>
-            <span>Restaurants</span>
-          </div>
-          <div class="proof-stat">
+      <section class="proof section-shell" aria-label="GoEatery proof points">
+        <div class="proof-heading">
+          <h2>A polished control center for everyday restaurant operations</h2>
+          <a class="button button-outline" href="#pricing">See Pricing</a>
+        </div>
+        <div class="proof-cards">
+          <article class="proof-card blue">
+            <span class="icon">↗</span>
+            <h3>Manage Every Order</h3>
+            <p>Dine-in, pickup, delivery, reservation, QR, and online ordering all sync into one workflow.</p>
             <strong>1.2M+</strong>
-            <span>Orders managed</span>
-          </div>
-          <div class="brand-cloud">
-            <span>The Place</span>
-            <span>Bukka Hut</span>
-            <span>Xovar Lounge</span>
-            <span>Cold Stone</span>
-            <span>Spur</span>
-          </div>
-        </section>
+            <small>orders managed</small>
+          </article>
+          <article class="proof-card sand">
+            <span class="icon">▦</span>
+            <h3>Live Kitchen Control</h3>
+            <p>Send orders to kitchen stations instantly with printable tickets and clear order statuses.</p>
+            <strong>Real-time</strong>
+            <small>KOT updates</small>
+          </article>
+          <article class="proof-card green">
+            <span class="icon">₦</span>
+            <h3>Restaurant Intelligence</h3>
+            <p>Track item performance, staff activity, payments, stock, and profit trends as they happen.</p>
+            <strong>24/7</strong>
+            <small>cloud access</small>
+          </article>
+        </div>
+      </section>
 
-        <section class="order-modes section-pad" id="features">
-          <div class="section-heading reveal">
-            <h2>Serve every way your customers love</h2>
-            <p>All your order channels. One powerful system.</p>
-          </div>
-
-          <div class="mode-grid">
-            <article class="mode-card reveal delay-1">
-              <div class="mode-icon tomato">🍽</div>
-              <div class="mode-image dine"></div>
-              <h3>Dine In</h3>
-              <p>Fast POS, table management, and seamless billing for a polished in-house experience.</p>
-              <a href="#">Learn more</a>
-            </article>
-            <article class="mode-card reveal delay-2">
-              <div class="mode-icon citrus">◴</div>
-              <div class="mode-image reservation"></div>
-              <h3>Reservation</h3>
-              <p>Take and manage bookings with live table availability and sharper reminders.</p>
-              <a href="#">Learn more</a>
-            </article>
-            <article class="mode-card reveal delay-3">
-              <div class="mode-icon mint">▣</div>
-              <div class="mode-image pickup"></div>
-              <h3>Pick Up</h3>
-              <p>Let customers order ahead and pick up quickly, with clear kitchen handoff.</p>
-              <a href="#">Learn more</a>
-            </article>
-            <article class="mode-card reveal delay-4">
-              <div class="mode-icon violet">↗</div>
-              <div class="mode-image delivery"></div>
-              <h3>Delivery</h3>
-              <p>Manage delivery orders, riders, and status tracking to get meals out faster.</p>
-              <a href="#">Learn more</a>
-            </article>
-          </div>
-        </section>
-
-        <section class="workflow-section section-pad">
-          <div class="workflow-rail" aria-hidden="true">
-            <span>01</span>
-            <span>02</span>
-            <span>03</span>
-          </div>
-          <div class="workflow-copy reveal">
-            <h2>Run your restaurant like a well-orchestrated kitchen</h2>
-            <p>
-              From the moment an order comes in to the final report, everything stays in sync.
-            </p>
-            <ul>
-              <li><strong>Kitchen Order Tickets</strong><span>Send new orders to the kitchen instantly.</span></li>
-              <li><strong>Staff & Role Permissions</strong><span>Separate logins. Right access, right people.</span></li>
-              <li><strong>Secure Payments</strong><span>Accept cash, card, transfers, and wallets.</span></li>
-              <li><strong>Powerful Reports</strong><span>Real-time insights to grow your business.</span></li>
-            </ul>
-            <a class="button button-light" href="#features-grid">Explore All Features</a>
-          </div>
-
-          <div class="workflow-cards">
-            <article class="ticket-card reveal delay-1">
+      <section class="split-section section-shell" id="features">
+        <div class="phone-panel" aria-label="Mobile restaurant POS preview">
+          <div class="phone-card">
+            <div class="phone-head">
               <div>
-                <strong>KOT-1982</strong>
-                <span>New Order</span>
+                <span>Table 04 checkout</span>
+                <small>Cashier: Ada · Main Branch</small>
               </div>
-              <p>Table 12 <em>Dine In</em> 12:45 PM</p>
-              <hr />
-              <p>1x Jollof Rice <strong>2</strong></p>
-              <p>1x Grilled Chicken <strong>1</strong></p>
-              <p>2x Zobo Drink <strong>1</strong></p>
-              <small>Note: Less spicy please</small>
-              <div class="ticket-actions">
-                <button>Print</button>
-                <button>Mark as Done</button>
-              </div>
-            </article>
-
-            <article class="staff-card reveal delay-2">
-              <h3>Staff</h3>
-              <p><span></span>Tunde A.<strong>Admin</strong></p>
-              <p><span></span>Chioma B.<strong>Manager</strong></p>
-              <p><span></span>Emeka J.<strong>Kitchen</strong></p>
-              <p><span></span>Blessing O.<strong>POS</strong></p>
-            </article>
-
-            <article class="sales-card reveal delay-3">
-              <div class="panel-heading">
-                <h3>Sales Overview</h3>
-                <span>This month</span>
-              </div>
-              <strong>₦7,842,300</strong>
-              <div class="bar-chart" aria-hidden="true">
-                <span style="--h: 34%"></span>
-                <span style="--h: 52%"></span>
-                <span style="--h: 43%"></span>
-                <span style="--h: 67%"></span>
-                <span style="--h: 58%"></span>
-                <span style="--h: 82%"></span>
-              </div>
-              <div class="donut-row">
-                <div class="donut"></div>
-                <p>Card 42%<br />Cash 32%<br />Transfer 17%</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="feature-grid-section section-pad" id="features-grid">
-          <div class="section-heading reveal">
-            <h2>Everything you need to operate and grow</h2>
-            <p>Designed for modern restaurants, cafes, and bars.</p>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-card reveal">
-              <span>♨</span>
-              <h3>Menu Management</h3>
-              <p>Create, update, and organize menus across all channels in real time.</p>
-            </article>
-            <article class="feature-card reveal">
-              <span>▧</span>
-              <h3>Inventory Control</h3>
-              <p>Track stock levels, get alerts, and reduce waste with live inventory tracking.</p>
-            </article>
-            <article class="feature-card reveal">
-              <span>▦</span>
-              <h3>QR Ordering</h3>
-              <p>Contactless menus and orders via QR codes, fast, safe, and convenient.</p>
-            </article>
-            <article class="feature-card reveal">
-              <span>♡</span>
-              <h3>Customer Database</h3>
-              <p>Build loyalty with customer profiles, order history, and preferences.</p>
-            </article>
-            <article class="feature-card reveal">
-              <span>▥</span>
-              <h3>Multi-Location</h3>
-              <p>Manage branches, users, menus, and reporting from a single dashboard.</p>
-            </article>
-            <article class="feature-card reveal">
-              <span>◌</span>
-              <h3>Custom Themes</h3>
-              <p>Match your brand with beautiful themes for your dedicated ordering page.</p>
-            </article>
-            <article class="feature-card reveal">
-              <span>✚</span>
-              <h3>Staff Management</h3>
-              <p>Assign roles, permissions, schedules, and responsibilities with clarity.</p>
-            </article>
-            <article class="feature-card reveal">
-              <span>↟</span>
-              <h3>Analytics & Reports</h3>
-              <p>Understand sales, items, staff, and customers with actionable insights.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="pricing-section section-pad" id="pricing">
-          <div class="section-heading reveal">
-            <h2>Flexible plans for every stage of your journey</h2>
-            <p>Start free for 15 days. Upgrade anytime.</p>
-          </div>
-          <div class="pricing-grid">
-            <article class="price-card reveal delay-1">
-              <h3>Standard Plan</h3>
-              <p>For small & medium restaurants</p>
-              <strong>₦15,000 <span>/ month</span></strong>
-              <ul>
-                <li>Menu & unlimited items</li>
-                <li>KOT & unlimited orders</li>
-                <li>Unlimited staff & customers</li>
-                <li>Reports</li>
-                <li>1 location</li>
-              </ul>
-              <a class="button button-outline" href="#">Start Free Trial</a>
-            </article>
-
-            <article class="price-card featured reveal delay-2">
-              <div class="plan-badge">Most Popular</div>
-              <h3>Business Plan</h3>
-              <p>For growing restaurants & bars</p>
-              <strong>₦20,000 <span>/ month</span></strong>
-              <ul>
-                <li>All Standard features</li>
-                <li>Table management & reservations</li>
-                <li>Online payments</li>
-                <li>Inventory management</li>
-                <li>3 locations and custom themes</li>
-              </ul>
-              <a class="button button-primary" href="#">Start Free Trial</a>
-            </article>
-
-            <article class="price-card reveal delay-3">
-              <div class="plan-badge violet">Best Value</div>
-              <h3>Lifetime Plan</h3>
-              <p>One-time payment for business features</p>
-              <strong>₦750,000</strong>
-              <ul>
-                <li>All Business features</li>
-                <li>Lifetime access</li>
-                <li>No renewal</li>
-                <li>Priority support</li>
-                <li>3 locations</li>
-              </ul>
-              <a class="button button-outline" href="#">Get It Now</a>
-            </article>
-          </div>
-        </section>
-
-        <section class="testimonials section-pad">
-          <div class="section-heading reveal">
-            <h2>Loved by restaurant owners across Nigeria</h2>
-          </div>
-          <div class="testimonial-grid">
-            <article class="quote-card reveal delay-1">
-              <p>
-                “GoEatery transformed how we run our restaurant. The reservation tool keeps our
-                dining room organized, and the analytics dashboard helps us spot trends.”
-              </p>
-              <div><span>KN</span><strong>Kelly Nwoaba</strong><small>Owner, Xovar Lounge</small></div>
-            </article>
-            <article class="quote-card reveal delay-2">
-              <p>
-                “Customers love the easy-to-use ordering page, and we’ve seen a 30% bump in
-                takeout sales in just two months. The support team is fantastic.”
-              </p>
-              <div><span>FA</span><strong>Fumilayo Adekunle</strong><small>Manager, Bukka Hut</small></div>
-            </article>
-            <article class="quote-card reveal delay-3">
-              <p>
-                “As a bar owner, I was hesitant to invest in tech, but GoEatery proved its worth
-                in weeks. It’s intuitive and my staff picked it up instantly.”
-              </p>
-              <div><span>MC</span><strong>Michael Chuck</strong><small>Owner, The Place</small></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="cta-section reveal">
-          <div>
-            <h2>Ready to simplify your restaurant operations?</h2>
-          </div>
-          <p>Join restaurants using GoEatery to serve more, work less, and grow faster.</p>
-          <div class="cta-actions">
-            <a class="button button-light" href="#pricing">Start Free Trial</a>
-            <a class="button button-glass" href="https://demo.goeatery.ng">View Demo</a>
-          </div>
-          <div class="plate-art" aria-hidden="true">
-            <span></span>
-          </div>
-        </section>
-
-        <section class="faq-section section-pad" id="faqs">
-          <div class="section-heading reveal">
-            <h2>FAQs</h2>
-            <p>A few common questions from restaurant owners.</p>
-          </div>
-          <div class="faq-list">
-            <details class="reveal" open>
-              <summary>What is GoEatery?</summary>
-              <p>
-                GoEatery is a restaurant and bar management platform for sales, orders,
-                reservations, menus, customer ordering pages, and day-to-day operations.
-              </p>
-            </details>
-            <details class="reveal">
-              <summary>Is GoEatery mobile-friendly?</summary>
-              <p>
-                Yes. It is responsive and supports progressive web app usage across mobile and
-                desktop devices.
-              </p>
-            </details>
-            <details class="reveal">
-              <summary>Can I manage staff permissions?</summary>
-              <p>
-                Yes. Each staff member can have a separate login with role-based access and
-                permissions.
-              </p>
-            </details>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer" id="resources">
-        <div class="footer-brand">
-          <a class="brand" href="#top">
-            <span class="brand-mark">
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path d="M4 17.5C4.7 10.5 9.4 6 16 6s11.3 4.5 12 11.5H4Z" />
-                <path d="M8 19h16c1.2 0 2.2 1 2.2 2.2S25.2 23.4 24 23.4H8c-1.2 0-2.2-1-2.2-2.2S6.8 19 8 19Z" />
-                <path d="M15 3.8h2v3h-2z" />
-              </svg>
-            </span>
-            <span>GoEatery</span>
-          </a>
-          <p>All-in-one restaurant and bar management platform built for Nigerian businesses.</p>
-          <div class="socials" aria-label="Social links">
-            <a href="#">f</a>
-            <a href="#">ig</a>
-            <a href="#">wa</a>
-            <a href="#">yt</a>
+              <strong>₦18,750</strong>
+            </div>
+            <div class="pos-meta">
+              <span>Invoice #1058</span>
+              <span>12:42 PM</span>
+            </div>
+            <label class="search-line">
+              <span>Search item or scan barcode</span>
+            </label>
+            <div class="product-list">
+              <span><i>2x Jollof rice</i><em>₦8,400</em></span>
+              <span><i>Grilled chicken</i><em>₦9,500</em></span>
+              <span><i>Zobo drink</i><em>₦850</em></span>
+            </div>
+            <div class="pos-summary">
+              <span>Subtotal <em>₦18,750</em></span>
+              <span>Tax <em>₦0</em></span>
+              <strong>Total <em>₦18,750</em></strong>
+            </div>
+            <div class="payment-row" aria-label="Payment methods">
+              <span class="active">Cash</span>
+              <span>Transfer</span>
+              <span>Card</span>
+            </div>
+            <button type="button">Complete Sale</button>
           </div>
         </div>
-        <div class="footer-col">
+        <div class="split-copy">
+          <p class="eyebrow">POS that keeps service moving</p>
+          <h2>Serve guests faster from any internet-enabled device</h2>
+          <p>
+            GoEatery works on modern browsers, tablets, and phones, so owners and teams can manage
+            tables, customers, menus, payments, reservations, kitchen activity, and reports anywhere.
+          </p>
+          <ul class="check-list">
+            <li>Multiple branches with role-based permissions for owners, managers, kitchen, and POS teams.</li>
+            <li>Custom customer ordering pages for delivery, pickup, reservations, and QR menus.</li>
+            <li>Invoice layouts for standard printers and thermal POS/KOT printers.</li>
+            <li>Inventory, payments, customer records, reports, and staff access in one platform.</li>
+          </ul>
+          <a class="button button-dark" href="#pricing">Start Free Trial</a>
+        </div>
+      </section>
+
+      <section class="modules section-shell" id="modules">
+        <div class="modules-head">
+          <div>
+            <p class="eyebrow">Restaurant module ecosystem</p>
+            <h2>Purpose-built modules for how food businesses actually operate</h2>
+          </div>
+          <p>
+            GoEatery adapts to quick-service restaurants, lounges, bars, cafes, cloud kitchens,
+            hotels, caterers, and multi-branch food brands.
+          </p>
+        </div>
+        <div class="module-grid">
+          <article class="module-card module-card-featured">
+            <div class="module-card-top">
+              <span>01</span>
+              <svg class="module-icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M4 17h16" />
+                <path d="M6 17a6 6 0 0 1 12 0" />
+                <path d="M12 5v3" />
+                <path d="M9 5h6" />
+              </svg>
+            </div>
+            <h3>Restaurant POS</h3>
+            <strong>Sales</strong>
+            <p>Fast checkout, split payments, table billing, discounts, taxes, receipts, and cashier controls.</p>
+            <div class="module-flow" aria-hidden="true">
+              <span>Menu</span>
+              <span>Order</span>
+              <span>Payment</span>
+            </div>
+          </article>
+          <article class="module-card">
+            <div class="module-card-top"><span>02</span><span class="module-glyph">▤</span></div>
+            <h3>Kitchen Order Tickets</h3>
+            <strong>Production</strong>
+            <p>Route orders to the kitchen instantly, track preparation status, and reduce service delays.</p>
+          </article>
+          <article class="module-card">
+            <div class="module-card-top"><span>03</span><span class="module-glyph">◴</span></div>
+            <h3>Reservations & Tables</h3>
+            <strong>Floor</strong>
+            <p>Manage bookings, table availability, guest notes, seating, and room/table assignments.</p>
+          </article>
+          <article class="module-card">
+            <div class="module-card-top"><span>04</span><span class="module-glyph">▦</span></div>
+            <h3>QR & Online Ordering</h3>
+            <strong>Digital</strong>
+            <p>Launch branded ordering pages for QR menus, pickup, delivery, and direct customer sales.</p>
+          </article>
+          <article class="module-card">
+            <div class="module-card-top"><span>05</span><span class="module-glyph">◈</span></div>
+            <h3>Inventory Management</h3>
+            <strong>Stock</strong>
+            <p>Monitor stock levels, ingredients, low-stock alerts, item availability, and branch movement.</p>
+          </article>
+          <article class="module-card">
+            <div class="module-card-top"><span>06</span><span class="module-glyph">♡</span></div>
+            <h3>CRM & Customers</h3>
+            <strong>Loyalty</strong>
+            <p>Store customers, preferences, order history, delivery addresses, and communication details.</p>
+          </article>
+          <article class="module-card">
+            <div class="module-card-top"><span>07</span><span class="module-glyph">⚙</span></div>
+            <h3>Staff & Permissions</h3>
+            <strong>Team</strong>
+            <p>Give every staff member the right access level without exposing sensitive controls.</p>
+          </article>
+          <article class="module-card">
+            <div class="module-card-top"><span>08</span><span class="module-glyph">↟</span></div>
+            <h3>Reports & Analytics</h3>
+            <strong>Insights</strong>
+            <p>Understand sales, products, staff activity, payments, reservations, and kitchen throughput.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="dark-band">
+        <div class="section-shell dark-inner">
+          <div class="dark-copy">
+            <p class="eyebrow">Operational intelligence</p>
+            <h2>Know what is happening in every branch before it becomes a problem</h2>
+            <p>
+              Turn daily restaurant activity into reports you can act on: sales history, item demand,
+              payment mix, order speed, staff activity, customer balances, and inventory movement.
+            </p>
+          </div>
+          <div class="dark-panels">
+            <article class="dark-card">
+              <span>Sales trend</span>
+              <strong>₦1,820,320</strong>
+              <div class="mini-line"></div>
+            </article>
+            <article class="dark-card">
+              <span>Team access</span>
+              <div class="avatar-row">
+                <i>A</i><i>C</i><i>K</i><i>M</i>
+              </div>
+              <p>Admin, cashier, kitchen, manager, and custom roles stay permission-aware.</p>
+            </article>
+            <article class="dark-card wide">
+              <span>Operational reports</span>
+              <ul>
+                <li>Track every order channel</li>
+                <li>Monitor KOT and preparation time</li>
+                <li>Generate sales, stock, staff, and profit reports</li>
+              </ul>
+              <div class="mini-table" aria-hidden="true">
+                <span>Item</span><span>Status</span><span>Total</span>
+                <span>Jollof rice</span><span>Top seller</span><span>128</span>
+                <span>Kitchen speed</span><span>Improved</span><span>18%</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow section-shell">
+        <div class="workflow-head">
+          <div>
+            <p class="eyebrow">Start in minutes</p>
+            <h2>From signup to live restaurant operations without guesswork</h2>
+          </div>
+          <p>
+            Create your workspace, add your menu, invite staff, connect order channels, and watch
+            GoEatery become your daily operating rhythm.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card">
+            <div class="timeline-icon" aria-hidden="true">1</div>
+            <span>Step 1</span>
+            <h3>Create your workspace</h3>
+            <p>Add your business profile, branch, taxes, payment methods, and operating preferences.</p>
+          </article>
+          <article class="timeline-card">
+            <div class="timeline-icon" aria-hidden="true">2</div>
+            <span>Step 2</span>
+            <h3>Build your menu</h3>
+            <p>Add categories, items, prices, modifiers, availability, images, and kitchen routing.</p>
+          </article>
+          <article class="timeline-card timeline-card-support">
+            <div class="timeline-icon" aria-hidden="true">3</div>
+            <span>Step 3</span>
+            <h3>Go live</h3>
+            <p>Invite your team, print QR codes, accept orders, and track everything from dashboard reports.</p>
+          </article>
+        </div>
+        <div class="workflow-foot">
+          <p>Need guided setup? GoEatery support can help configure menus, branches, staff, printers, and reports.</p>
+          <a class="button button-outline" href="https://wa.me/2347031010500">Talk to Support</a>
+        </div>
+      </section>
+
+      <section class="pricing section-shell" id="pricing">
+        <div class="pricing-head">
+          <div class="pricing-copy">
+            <p class="eyebrow">Pricing plans</p>
+            <h2>Choose the GoEatery plan that matches your restaurant stage</h2>
+            <p>Start free for 15 days. Upgrade when your team is ready.</p>
+          </div>
+          <div class="pricing-proof" aria-label="Pricing highlights">
+            <span>No card required</span>
+            <span>15-day free trial</span>
+            <span>Cloud updates included</span>
+          </div>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <p class="plan-kicker">For lean teams</p>
+            <h3>Standard Plan</h3>
+            <p>For small and medium restaurants that need dependable daily order control.</p>
+            <strong>₦15,000 <span>/ month</span></strong>
+            <ul>
+              <li>Menu and unlimited items</li>
+              <li>KOT and unlimited orders</li>
+              <li>Unlimited staff and customers</li>
+              <li>Reports</li>
+              <li>1 location</li>
+            </ul>
+            <a class="button button-outline" href="#">Start Free Trial</a>
+          </article>
+          <article class="pricing-card featured-plan">
+            <p class="plan-kicker">Most chosen</p>
+            <h3>Business Plan</h3>
+            <p>For growing restaurants, bars, and lounges that need stronger service workflows.</p>
+            <strong>₦20,000 <span>/ month</span></strong>
+            <ul>
+              <li>All Standard features</li>
+              <li>Tables and reservations</li>
+              <li>Online payments</li>
+              <li>Inventory management</li>
+              <li>3 locations and custom themes</li>
+            </ul>
+            <a class="button button-dark" href="#">Start Free Trial</a>
+          </article>
+          <article class="pricing-card">
+            <p class="plan-kicker">Best value</p>
+            <h3>Lifetime Plan</h3>
+            <p>One-time payment for restaurants that want long-term business features.</p>
+            <strong>₦750,000</strong>
+            <ul>
+              <li>All Business features</li>
+              <li>Lifetime access</li>
+              <li>No renewal</li>
+              <li>Priority support</li>
+              <li>3 locations</li>
+            </ul>
+            <a class="button button-outline" href="#">Get It Now</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="faq section-shell" id="faq">
+        <div class="section-title">
+          <h2>Questions restaurant owners ask before moving to GoEatery</h2>
+          <p>Short answers for teams comparing POS, ordering, and restaurant management platforms.</p>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>What is GoEatery?</summary>
+            <p>
+              GoEatery is a cloud restaurant and bar management platform for sales, POS, reservations,
+              menus, online ordering, kitchen tickets, customer records, payments, and reports.
+            </p>
+          </details>
+          <details>
+            <summary>Can my staff use different permissions?</summary>
+            <p>Yes. Owners can create separate staff logins and assign role-based access for cashiers, managers, kitchen teams, and admins.</p>
+          </details>
+          <details>
+            <summary>Does GoEatery support online ordering and QR menus?</summary>
+            <p>Yes. You can create customer-facing ordering pages for QR menus, delivery, pickup, and direct online orders.</p>
+          </details>
+          <details>
+            <summary>Can I manage more than one branch?</summary>
+            <p>Yes. Supported plans include multi-location controls for menus, staff, orders, and reporting.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="cta-band section-shell" id="contact">
+        <h2>Ready to run a sharper restaurant operation?</h2>
+        <p>
+          Start with GoEatery today and give your team one stylish system for ordering, service,
+          kitchen coordination, payments, inventory, and growth.
+        </p>
+        <div class="cta-actions">
+          <a class="button button-light" href="#pricing">Start Free Trial</a>
+          <a class="button button-ghost" href="https://wa.me/2347031010500">Talk to Support</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid section-shell">
+        <a class="brand" href="#top" aria-label="GoEatery home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32">
+              <path d="M4 17.5C4.7 10.5 9.4 6 16 6s11.3 4.5 12 11.5H4Z" />
+              <path d="M8 19h16c1.2 0 2.2 1 2.2 2.2S25.2 23.4 24 23.4H8c-1.2 0-2.2-1-2.2-2.2S6.8 19 8 19Z" />
+              <path d="M15 3.8h2v3h-2z" />
+            </svg>
+          </span>
+          <span>GoEatery</span>
+        </a>
+        <div>
           <h3>Product</h3>
           <a href="#features">Features</a>
+          <a href="#modules">Modules</a>
           <a href="#pricing">Pricing</a>
-          <a href="#features-grid">Integrations</a>
-          <a href="#features-grid">Updates</a>
+          <a href="#faq">FAQs</a>
         </div>
-        <div class="footer-col">
+        <div>
           <h3>Company</h3>
-          <a href="#">About Us</a>
-          <a href="#">Blog</a>
-          <a href="#">Careers</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h3>Resources</h3>
-          <a href="#">Help Center</a>
-          <a href="#">Guides</a>
-          <a href="#">System Status</a>
-          <a href="#">Privacy Policy</a>
-        </div>
-        <div class="footer-col contact">
-          <h3>Get in touch</h3>
-          <a href="tel:+2347031010500">+234 703 101 0500</a>
+          <a href="https://wa.me/2347031010500">Contact us</a>
           <a href="mailto:hello@goeatery.ng">hello@goeatery.ng</a>
-          <span>Mokola, Ibadan, Nigeria</span>
+          <a href="https://demo.goeatery.ng">View Demo</a>
         </div>
-        <p class="copyright">
-          © 2026 GoEatery by OHR Systems. Supported by IChannel Technologies.
-        </p>
-      </footer>
-    </div>
+        <p>© 2026 GoEatery by OHR Systems. Supported by IChannel Technologies.</p>
+      </div>
+    </footer>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

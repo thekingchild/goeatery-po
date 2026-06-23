@@ -250,16 +250,18 @@ p {
 h1 {
   max-width: 880px;
   margin: 0 auto 20px;
-  font-size: clamp(44px, 6vw, 76px);
-  font-weight: 850;
+  font-family: "Inter Variable", Arial, sans-serif;
+  font-size: clamp(44px, 6vw, 60px);
+  font-weight: 600;
   line-height: 0.96;
   letter-spacing: -0.065em;
 }
 
-h2 {
+.section-heading {
   margin-bottom: 16px;
-  font-size: clamp(30px, 3.6vw, 50px);
-  font-weight: 820;
+  font-family: "Inter Variable", Arial, sans-serif;
+  font-size: clamp(30px, 3.6vw, 46px);
+  font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.058em;
 }
@@ -363,6 +365,15 @@ p {
   width: min(1280px, calc(100vw - 44px));
   margin: 0 auto;
   transform: none;
+}
+
+.hero-product img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 38px 100px rgba(14, 20, 34, 0.18);
 }
 
 .hero-product::before {
@@ -541,7 +552,9 @@ small,
 .panel-head h2,
 .summary-card h2 {
   margin: 0;
+  font-family: "Inter Variable", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 600;
   letter-spacing: -0.035em;
 }
 
@@ -655,10 +668,14 @@ small,
   margin-bottom: 28px;
 }
 
-.proof-heading h2,
-.modules-head h2,
-.workflow-head h2,
-.pricing-head h2 {
+.proof-heading .section-heading,
+.modules-head .section-heading,
+.workflow-head .section-heading,
+.pricing-head .section-heading,
+.split-copy .section-heading,
+.dark-copy .section-heading,
+.section-title .section-heading,
+.cta-band .section-heading {
   max-width: 620px;
 }
 
@@ -1511,7 +1528,7 @@ small,
   }
 
   h1 {
-    font-size: clamp(38px, 12vw, 58px);
+    font-size: clamp(38px, 12vw, 54px);
   }
 
   .hero-copy p {

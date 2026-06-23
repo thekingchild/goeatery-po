@@ -30,13 +30,17 @@ const revealItems = [
   )
 ];
 
+const revealAll = () => {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+};
+
 revealItems.forEach((item, index) => {
   item.classList.add("revealable");
   item.style.setProperty("--reveal-delay", `${Math.min(index * 45, 180)}ms`);
 });
 
-if (reducedMotion) {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+if (reducedMotion || !("IntersectionObserver" in window)) {
+  revealAll();
 } else {
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -51,4 +55,13 @@ if (reducedMotion) {
   );
 
   revealItems.forEach((item) => revealObserver.observe(item));
+
+  // Fallback so sections never remain hidden if observation is delayed or blocked.
+  window.addEventListener(
+    "load",
+    () => {
+      window.setTimeout(revealAll, 1200);
+    },
+    { once: true }
+  );
 }

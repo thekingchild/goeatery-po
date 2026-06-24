@@ -223,24 +223,6 @@ button {
   text-align: center;
 }
 
-.hero-brandline {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
-  padding: 8px 14px;
-  border: 1px solid rgba(255, 107, 53, 0.18);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.68);
-  box-shadow: 0 14px 28px rgba(16, 34, 32, 0.06);
-}
-
-.hero-brandline span {
-  color: #3d4b48;
-  font-size: 13px;
-  font-weight: 760;
-}
-
 h1,
 h2,
 h3,
@@ -1615,10 +1597,6 @@ small,
   .hero {
     gap: 40px;
     padding: 52px 0 66px;
-  }
-
-  .hero-brandline {
-    display: none;
   }
 
   h1 {

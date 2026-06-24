@@ -217,7 +217,8 @@ button {
 }
 
 .hero-copy {
-  max-width: 790px;
+  width: min(990px, 100%);
+  max-width: 990px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1525,6 +1526,10 @@ small,
 
   .hero {
     padding: 58px 0 70px;
+  }
+
+  .hero-brandline {
+    display: none;
   }
 
   h1 {

@@ -1155,8 +1155,9 @@ small,
 
 .dark-panels {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 14px;
+  max-width: 620px;
 }
 
 .dark-card {
@@ -1167,10 +1168,6 @@ small,
   background: rgba(7, 20, 18, 0.5);
   backdrop-filter: blur(10px);
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
-}
-
-.dark-card.wide {
-  grid-column: span 2;
 }
 
 .dark-card span {
@@ -1311,6 +1308,10 @@ small,
   margin: 0;
 }
 
+.workflow-support-link {
+  font-weight: 600;
+}
+
 .pricing {
   padding: 10px 0 104px;
 }
@@ -1367,7 +1368,7 @@ small,
 
 .pricing-plan-card {
   display: flex;
-  min-height: 600px;
+  min-height: 820px;
   flex-direction: column;
   padding: 34px 32px 28px;
   border: 1px solid rgba(16, 34, 32, 0.08);
@@ -1455,7 +1456,7 @@ small,
 
 .plan-features {
   display: grid;
-  gap: 18px;
+  gap: 11px;
   padding: 0;
   margin: 0 0 34px;
   list-style: none;
@@ -1464,24 +1465,35 @@ small,
 .plan-features li {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 11px;
   color: #5b6964;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.35;
 }
 
 .plan-features li::before {
   display: grid;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   content: "✓";
   place-items: center;
   flex: 0 0 auto;
   color: #fff;
   border-radius: 999px;
   background: #050b0a;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 900;
+}
+
+.plan-features li.is-unavailable {
+  color: #8b9893;
+  text-decoration: line-through;
+}
+
+.plan-features li.is-unavailable::before {
+  content: "×";
+  color: #fff;
+  background: #9aa6a1;
 }
 
 .pricing-plan-card .button {
@@ -1635,6 +1647,18 @@ small,
   }
 }
 
+@media (max-width: 1180px) {
+  .pricing-card-table {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin-inline: auto;
+  }
+
+  .pricing-plan-card {
+    min-height: auto;
+  }
+}
+
 @media (max-width: 1100px) {
   .dashboard-shell {
     grid-template-columns: 1fr;
@@ -1670,16 +1694,6 @@ small,
 
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .pricing-card-table {
-    grid-template-columns: 1fr;
-    max-width: 620px;
-    margin-inline: auto;
-  }
-
-  .pricing-plan-card {
-    min-height: auto;
   }
 }
 
@@ -1804,8 +1818,7 @@ small,
     grid-template-columns: 1fr;
   }
 
-  .module-card-featured,
-  .dark-card.wide {
+  .module-card-featured {
     grid-column: span 1;
   }
 

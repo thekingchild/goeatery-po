@@ -26,7 +26,7 @@ if (header && toggle) {
 
 const revealItems = [
   ...document.querySelectorAll(
-    ".hero-copy, .hero-product, .proof-card, .phone-panel, .split-copy, .module-card, .dark-copy, .dark-card, .timeline-card, .workflow-foot, .pricing-card, .faq-list details, .cta-band"
+    ".hero-copy, .hero-product, .proof-card, .phone-panel, .split-copy, .module-card, .dark-copy, .dark-card, .timeline-card, .workflow-foot, .pricing-card, .faq-list details, .cta-band, .privacy-hero-copy, .privacy-summary, .privacy-highlights article, .privacy-policy-intro, .privacy-policy-grid article, .privacy-contact"
   )
 ];
 

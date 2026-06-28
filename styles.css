@@ -719,6 +719,10 @@ small,
   max-width: 460px;
 }
 
+.modules-head .eyebrow {
+  font-weight: 700;
+}
+
 .proof-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1418,7 +1422,7 @@ small,
   gap: 14px;
   padding: 14px;
   border-radius: 24px;
-  background: rgba(16, 34, 32, 0.06);
+  background: #f5f5f5;
 }
 
 .billing-toggle {
@@ -2098,6 +2102,183 @@ small,
   color: rgba(255, 255, 255, 0.72);
 }
 
+.change-log-section {
+  padding: 88px 0 96px;
+}
+
+.change-log-intro {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.change-log-intro .section-heading {
+  max-width: 760px;
+}
+
+.change-log-intro p:not(.eyebrow) {
+  max-width: 620px;
+}
+
+.change-log-list {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.change-log-list::before {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 19px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(255, 107, 53, 0.3), rgba(16, 34, 32, 0.08));
+  content: "";
+}
+
+.change-log-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 24px;
+  margin-left: 46px;
+  padding: 22px 24px;
+  border: 1px solid rgba(16, 34, 32, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 18px 42px rgba(16, 34, 32, 0.05);
+  cursor: pointer;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.change-log-card::before {
+  position: absolute;
+  top: 24px;
+  left: -36px;
+  width: 14px;
+  height: 14px;
+  border: 5px solid var(--bg);
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px rgba(255, 107, 53, 0.2);
+  content: "";
+}
+
+.change-log-card::after {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  color: var(--ink);
+  border: 1px solid rgba(16, 34, 32, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  content: "+";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.change-log-card:hover,
+.change-log-card:focus-visible {
+  border-color: rgba(255, 107, 53, 0.26);
+  box-shadow: 0 22px 46px rgba(16, 34, 32, 0.08);
+}
+
+.change-log-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.change-log-card.is-current {
+  border-color: rgba(255, 107, 53, 0.34);
+  background:
+    radial-gradient(circle at 92% 10%, rgba(57, 207, 165, 0.12), transparent 14rem),
+    rgba(255, 255, 255, 0.84);
+}
+
+.change-log-card.is-open::after {
+  color: #fff;
+  background: var(--ink);
+  content: "-";
+  transform: rotate(180deg);
+}
+
+.change-log-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+.change-log-meta strong {
+  width: fit-content;
+  padding: 8px 12px;
+  color: #fff;
+  border-radius: 999px;
+  background: var(--ink);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+.change-log-meta span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.change-log-card h3 {
+  max-width: calc(100% - 44px);
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.08;
+}
+
+.change-log-card ul {
+  grid-column: 2;
+  display: grid;
+  gap: 9px;
+  padding: 0;
+  max-height: 0;
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
+  opacity: 0;
+  transition: max-height 260ms var(--ease-out), margin 220ms ease, opacity 180ms ease;
+}
+
+.change-log-card.is-open ul {
+  max-height: 36rem;
+  margin-top: 16px;
+  opacity: 1;
+}
+
+.change-log-card li {
+  position: relative;
+  padding-left: 20px;
+  color: #5d6b66;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.change-log-card li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  content: "";
+}
+
 .revealable {
   opacity: 0;
   translate: 0 22px;
@@ -2178,7 +2359,8 @@ small,
   }
 
   .privacy-hero,
-  .privacy-policy {
+  .privacy-policy,
+  .change-log-card {
     grid-template-columns: 1fr;
   }
 
@@ -2276,6 +2458,33 @@ small,
   .privacy-contact {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .change-log-section {
+    padding-bottom: 72px;
+  }
+
+  .change-log-list::before {
+    left: 14px;
+  }
+
+  .change-log-card {
+    gap: 12px;
+    margin-left: 36px;
+    padding: 22px 18px;
+  }
+
+  .change-log-card ul {
+    grid-column: 1;
+  }
+
+  .change-log-card::before {
+    left: -30px;
+  }
+
+  .change-log-card::after {
+    top: 18px;
+    right: 18px;
   }
 
   .hero {

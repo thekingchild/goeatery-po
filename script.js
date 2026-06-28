@@ -2,6 +2,7 @@ const header = document.querySelector("[data-nav]");
 const toggle = document.querySelector(".menu-toggle");
 const billingOptions = document.querySelectorAll("[data-billing-option]");
 const planPrices = document.querySelectorAll("[data-monthly-price][data-annual-price]");
+const changeLogCards = document.querySelectorAll(".change-log-card");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const updateHeaderState = () => {
@@ -55,6 +56,36 @@ billingOptions.forEach((option) => {
     const nextOption = document.querySelector(`[data-billing-option="${nextPeriod}"]`);
     setBillingPeriod(nextPeriod);
     nextOption?.focus();
+  });
+});
+
+changeLogCards.forEach((card) => {
+  const version = card.querySelector(".change-log-meta strong")?.textContent?.trim() || "release";
+  const title = card.querySelector("h3")?.textContent?.trim() || "release notes";
+  const notes = card.querySelector("ul");
+  const notesId = `release-${version.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`;
+
+  if (notes) {
+    notes.id = notesId;
+  }
+
+  card.setAttribute("role", "button");
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("aria-controls", notesId);
+  card.setAttribute("aria-label", `Toggle ${version} ${title}`);
+  card.setAttribute("aria-expanded", String(card.classList.contains("is-open")));
+
+  const toggleCard = () => {
+    const isOpen = card.classList.toggle("is-open");
+    card.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  card.addEventListener("click", toggleCard);
+  card.addEventListener("keydown", (event) => {
+    if (!["Enter", " "].includes(event.key)) return;
+
+    event.preventDefault();
+    toggleCard();
   });
 });
 

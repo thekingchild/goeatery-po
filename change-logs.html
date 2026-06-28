@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Logs - GoEatery</title>
+    <meta
+      name="description"
+      content="Review selected GoEatery release notes for POS, ordering, reservations, delivery, reporting, kitchen tickets, and restaurant operations."
+    />
+    <meta name="theme-color" content="#102220" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ff6b35'/%3E%3Cpath d='M12 34C14 20 22 13 32 13s18 7 20 21H12Z' fill='white'/%3E%3Cpath d='M18 38h28a5 5 0 0 1 0 10H18a5 5 0 0 1 0-10Z' fill='white'/%3E%3Cpath d='M30 8h4v7h-4z' fill='white'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260626" />
+  </head>
+  <body class="inner-page">
+    <header class="site-header" data-nav>
+      <div class="site-header-inner section-shell">
+        <a class="brand brand-header" href="index.html" aria-label="GoEatery home">
+          <img class="brand-logo" src="assets/goeatery-logo-black.svg" alt="GoEatery - Hospitality made simple" />
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="index.html#features">Features</a>
+          <a href="index.html#modules">Modules</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#faq">FAQs</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a class="header-cta" href="index.html">Back Home</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="change-log-section section-shell" id="release-notes" aria-label="Selected release notes">
+        <div class="change-log-intro">
+          <p class="eyebrow">Release notes</p>
+          <h2 class="section-heading">What changed across selected GoEatery versions</h2>
+          <p>Each entry is written for GoEatery and trimmed to the most useful product-facing changes.</p>
+        </div>
+
+        <div class="change-log-list">
+          <article class="change-log-card is-current is-open">
+            <div class="change-log-meta">
+              <strong>v1.3.08</strong>
+              <span>Jun 16, 2026</span>
+            </div>
+            <h3>Reports, KOT controls, and permissions polish</h3>
+            <ul>
+              <li>Added an order-wise detailed report for deeper sales review.</li>
+              <li>Added a canceled KOT print option for kitchen and audit workflows.</li>
+              <li>Improved table locking to prevent duplicate orders on the same table.</li>
+              <li>Fixed due-payment totals, loyalty behavior, kiosk sessions, customer icons, and POS interface issues.</li>
+              <li>Separated staff permissions for billing, payment, and item deletion actions.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.3.02</strong>
+              <span>May 24, 2026</span>
+            </div>
+            <h3>QR, ordering, reservations, and dashboard refresh</h3>
+            <ul>
+              <li>Redesigned QR code management with preview, regenerate, download, and print actions.</li>
+              <li>Improved customer ordering so dine-in, delivery, pickup, and reservation flows feel clearer.</li>
+              <li>Enhanced reservation management with area support, better assignment, and updated booking communication.</li>
+              <li>Refined dashboard, menu copying, image handling, branding, app download settings, delivery details, and POS printing.</li>
+              <li>Improved admin permissions, onboarding, support tickets, contact pages, profiles, and general platform stability.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.3.0</strong>
+              <span>May 13, 2026</span>
+            </div>
+            <h3>Menu compliance, POS catalog, and order completion settings</h3>
+            <ul>
+              <li>Added allergen and dietary label support for menu items.</li>
+              <li>Added a setting to automatically mark paid orders as completed.</li>
+              <li>Updated the POS menu item catalog and fixed related POS issues.</li>
+              <li>Restricted waiters so they can only select themselves where required.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.97</strong>
+              <span>May 09, 2026</span>
+            </div>
+            <h3>Menu upload, POS fixes, and offline payment support</h3>
+            <ul>
+              <li>Fixed menu image upload problems reported by some accounts.</li>
+              <li>Improved add-customer behavior from the POS during new KOT creation.</li>
+              <li>Fixed bulk menu uploads, order deletion, and POS design issues.</li>
+              <li>Added support for recording offline payments.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.9</strong>
+              <span>May 05, 2026</span>
+            </div>
+            <h3>Major POS refresh and offline ordering foundation</h3>
+            <ul>
+              <li>Revamped the POS experience across the checkout workspace.</li>
+              <li>Introduced early offline POS capability.</li>
+              <li>Added OpenStreetMap support.</li>
+              <li>Shipped additional bug fixes around the updated POS experience.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.75</strong>
+              <span>Mar 25, 2026</span>
+            </div>
+            <h3>Waiter, delivery assignment, and mobile fixes</h3>
+            <ul>
+              <li>Adjusted waiter status handling so new waiter actions start pending.</li>
+              <li>Improved action-button loaders across the platform.</li>
+              <li>Limited delivery assignment so one order is assigned to one delivery person at a time.</li>
+              <li>Fixed table clicks, POS reload delays, mobile sidebar behavior, customer-site language issues, and multiple KOT problems.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.73</strong>
+              <span>Mar 20, 2026</span>
+            </div>
+            <h3>Delivery partner workspace and reporting improvements</h3>
+            <ul>
+              <li>Added admin and partner-facing delivery sections.</li>
+              <li>Improved COD tracking at the order level.</li>
+              <li>Added waiter and chef notifications.</li>
+              <li>Improved sales reporting and shipped general fixes.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.72</strong>
+              <span>Mar 13, 2026</span>
+            </div>
+            <h3>Restaurant status, tax import, and delivery access</h3>
+            <ul>
+              <li>Added restaurant open and close settings.</li>
+              <li>Added branch tax import support.</li>
+              <li>Added refund amount button permissions.</li>
+              <li>Introduced delivery executive login and control panel updates.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.71</strong>
+              <span>Mar 06, 2026</span>
+            </div>
+            <h3>Delivery partners, maps, and waiter confirmation</h3>
+            <ul>
+              <li>Added a delivery partner section.</li>
+              <li>Added restaurant open and close controls.</li>
+              <li>Added waiter order confirmation.</li>
+              <li>Added Google Maps support on restaurant pages and blocked discounts after billing.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.62</strong>
+              <span>Jan 23, 2026</span>
+            </div>
+            <h3>Tax, permissions, refunds, and order handling</h3>
+            <ul>
+              <li>Fixed tax calculations across POS and reports.</li>
+              <li>Improved permissions, customer orders, table requirements, mobile trial UI, realtime updates, and dark-mode text.</li>
+              <li>Added support-ticket visibility controls, KOT creation for existing orders, time format settings, package descriptions, and report filters.</li>
+              <li>Added pickup customer details, Mollie payments, waiter-table linking, refunds, menu-by-table QR choices, and order merging.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.60</strong>
+              <span>Dec 11, 2025</span>
+            </div>
+            <h3>Draft orders, table merging, and POS speed</h3>
+            <ul>
+              <li>Added table merge support for unpaid orders.</li>
+              <li>Added draft orders and customer-facing Wi-Fi credential display.</li>
+              <li>Optimized POS interface speed.</li>
+              <li>Fixed translation, dark-mode FAQ visibility, customer login, and phone country-code issues.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.55</strong>
+              <span>Nov 12, 2025</span>
+            </div>
+            <h3>Pickup details, receipts, and package limits</h3>
+            <ul>
+              <li>Added settings to disable the POS order-type popup and customer-site header.</li>
+              <li>Captured customer name and phone for pickup orders.</li>
+              <li>Added table-change confirmation for existing orders.</li>
+              <li>Added customer phone visibility on receipts plus paid/unpaid receipt indicators.</li>
+              <li>Added package limits for orders and menu items.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.53</strong>
+              <span>Oct 23, 2025</span>
+            </div>
+            <h3>Delivery app reporting and token fixes</h3>
+            <ul>
+              <li>Added delivery app reporting.</li>
+              <li>Fixed order token number behavior.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.52</strong>
+              <span>Oct 23, 2025</span>
+            </div>
+            <h3>Order-type pricing and delivery app settings</h3>
+            <ul>
+              <li>Added separate pricing by order type.</li>
+              <li>Added delivery app settings under order settings.</li>
+              <li>Fixed Paddle subscription payment behavior.</li>
+              <li>Added a terms-and-conditions link option for signup forms.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.48</strong>
+              <span>Oct 14, 2025</span>
+            </div>
+            <h3>Token screens, registration consent, and reporting fixes</h3>
+            <ul>
+              <li>Added token number management and customer screen token display.</li>
+              <li>Added registration options for terms and privacy acceptance.</li>
+              <li>Allowed waiter assignment after billing and added a markdown editor for landing pages.</li>
+              <li>Fixed sales reports, modifiers, customer order auto-printing, PayPal, table QR behavior, and customer display issues.</li>
+              <li>Prepared compatibility for the cash register module.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.44</strong>
+              <span>Sep 26, 2025</span>
+            </div>
+            <h3>Transfers, KOT status visibility, and translation fixes</h3>
+            <ul>
+              <li>Fixed Xendit gateway behavior and contact page background images.</li>
+              <li>Added bank transfer records to reports.</li>
+              <li>Fixed translation, delivery executive, and order number issues.</li>
+              <li>Showed KOT status on customer orders and added an undo option for KOT status.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.43</strong>
+              <span>Sep 08, 2025</span>
+            </div>
+            <h3>Menu images, staff security, and printer language support</h3>
+            <ul>
+              <li>Added menu image visibility controls, Xendit payments, superadmin creation, and staff password changes.</li>
+              <li>Fixed order issues, kitchen permissions, languages, and auto refresh.</li>
+              <li>Improved thermal printer support for more languages and symbols.</li>
+              <li>Added bulk menu item upload.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.42</strong>
+              <span>Aug 14, 2025</span>
+            </div>
+            <h3>Customer display, reservations, and delivery fees</h3>
+            <ul>
+              <li>Added customer display as a package feature.</li>
+              <li>Added delete-order confirmation and bank transfer in payment entry.</li>
+              <li>Improved currency-aware pricing plan display.</li>
+              <li>Added reservation restrictions, guest minimums, and POS delivery fee support.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.38</strong>
+              <span>Jul 22, 2025</span>
+            </div>
+            <h3>Customer display, tax setup, and staff roles</h3>
+            <ul>
+              <li>Added restaurant login details to welcome emails.</li>
+              <li>Added a customer display screen.</li>
+              <li>Added item-level tax configuration and predefined payment amount settings.</li>
+              <li>Added custom staff role creation and fixed interface and workflow bugs.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.36</strong>
+              <span>Jul 09, 2025</span>
+            </div>
+            <h3>Direct printing, realtime KOT, and waiter reporting</h3>
+            <ul>
+              <li>Added beta direct printing through printer settings.</li>
+              <li>Added realtime updates for orders and KOT activity.</li>
+              <li>Added waiter filtering to sales reports.</li>
+              <li>Fixed customer logout routing and payment gateway visibility issues.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.35</strong>
+              <span>Jun 27, 2025</span>
+            </div>
+            <h3>Branch import and POS action fixes</h3>
+            <ul>
+              <li>Added branch creation support from existing branch data.</li>
+              <li>Fixed mobile footer/header menu placement on landing pages.</li>
+              <li>Fixed split payment by quantity and KOT deletion cases.</li>
+              <li>Added a combined POS action for KOT, bill, and payment.</li>
+              <li>Fixed untranslated email content.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.33</strong>
+              <span>Jun 20, 2025</span>
+            </div>
+            <h3>Payment gateways, item notes, sorting, and secure order pages</h3>
+            <ul>
+              <li>Added item notes, menu sorting, per-item KOT ready status, and KOT settings.</li>
+              <li>Added Paystack, PayPal, and Payfast payment options with admin-level gateway controls.</li>
+              <li>Added footer links, signup phone field, and direct print without popup.</li>
+              <li>Fixed split quantities, past reservation times, waiter selection, payment amount edits, delivery fees, and order success page security.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.32</strong>
+              <span>Jun 04, 2025</span>
+            </div>
+            <h3>Live reload, delivery fees, and customer assignment fixes</h3>
+            <ul>
+              <li>Added order live-reload enable and disable control.</li>
+              <li>Fixed delivery fee visibility on bills.</li>
+              <li>Fixed customer info editing, existing-order assignment, paid-order payment changes, and duplicated customer details.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.30</strong>
+              <span>May 20, 2025</span>
+            </div>
+            <h3>Delivery settings, landing customization, and reservation fixes</h3>
+            <ul>
+              <li>Added delivery settings with multiple admin controls.</li>
+              <li>Added landing page and image customization for platform admins.</li>
+              <li>Fixed call-waiter permissions, reservations, restaurant charges, order cancellation, record deletion, and other issues.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.29</strong>
+              <span>Apr 23, 2025</span>
+            </div>
+            <h3>Flutterwave, booking details, and safer paid orders</h3>
+            <ul>
+              <li>Added Flutterwave payment gateway support.</li>
+              <li>Added name and phone fields to table booking.</li>
+              <li>Added waiter filtering in orders.</li>
+              <li>Prevented paid orders from being deleted, while still allowing cancellation.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.20</strong>
+              <span>Mar 21, 2025</span>
+            </div>
+            <h3>PWA, package, and KOT print fixes</h3>
+            <ul>
+              <li>Fixed PWA-related issues.</li>
+              <li>Removed an incorrectly included import report feature from packages.</li>
+              <li>Fixed KOT print details and other general issues.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.19</strong>
+              <span>Mar 17, 2025</span>
+            </div>
+            <h3>Inventory add-on, customer creation, and SEO fields</h3>
+            <ul>
+              <li>Released the inventory module add-on.</li>
+              <li>Added customer creation from the product flow.</li>
+              <li>Added SEO title control for landing pages.</li>
+              <li>Made package add-on features visible on pricing plans.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.18</strong>
+              <span>Mar 07, 2025</span>
+            </div>
+            <h3>Menu translations and charge controls</h3>
+            <ul>
+              <li>Added multilingual support for menu items.</li>
+              <li>Added enable and disable controls for extra restaurant charges.</li>
+              <li>Fixed split-bill service charge behavior and favicon edge cases.</li>
+            </ul>
+          </article>
+
+          <article class="change-log-card">
+            <div class="change-log-meta">
+              <strong>v1.2.14</strong>
+              <span>Feb 24, 2025</span>
+            </div>
+            <h3>Branding, QR receipt settings, and call-waiter setup</h3>
+            <ul>
+              <li>Added favicon upload in theme settings.</li>
+              <li>Added QR code controls in receipt settings.</li>
+              <li>Added call-waiter configuration on the customer site.</li>
+              <li>Shipped general bug fixes.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="privacy-contact section-shell">
+        <div>
+          <p class="eyebrow">Need help?</p>
+          <h2>Questions about a GoEatery release?</h2>
+          <p>Contact us and we will help you understand which updates matter for your restaurant workflow.</p>
+        </div>
+        <a class="button button-light" href="mailto:hello@goeatery.ng">hello@goeatery.ng</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid section-shell">
+        <a class="brand brand-footer" href="index.html" aria-label="GoEatery home">
+          <img class="brand-logo" src="assets/goeatery-logo-white.svg" alt="GoEatery - Hospitality made simple" />
+        </a>
+        <div>
+          <h3>Product</h3>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#modules">Modules</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="change-logs.html">Change Logs</a>
+          <a href="index.html#faq">FAQs</a>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <a href="https://wa.me/2347031010500">Contact us</a>
+          <a href="mailto:hello@goeatery.ng">hello@goeatery.ng</a>
+          <a href="https://demo.goeatery.ng">View Demo</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+        <p>© 2026 GoEatery by OHR Systems. Supported by IChannel Technologies.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://goeatery.ng/sitemap.xml
+Sitemap: https://goeatery.ng/home/sitemap.xml

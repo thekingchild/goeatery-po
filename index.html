@@ -299,6 +299,10 @@
           </div>
         </div>
         <div class="pricing-card-table">
+          <div class="billing-toggle" role="radiogroup" aria-label="Billing period">
+            <button class="billing-toggle-option is-active" type="button" role="radio" aria-checked="true" data-billing-option="monthly">Monthly</button>
+            <button class="billing-toggle-option" type="button" role="radio" aria-checked="false" data-billing-option="annual">Annual</button>
+          </div>
           <div class="pricing-plan-grid" aria-label="GoEatery plan summaries">
             <article class="pricing-plan-card">
               <div class="plan-title-row">
@@ -314,14 +318,14 @@
                   <span class="plan-fit">Small teams</span>
                 </div>
               </div>
-              <strong class="plan-price">₦15,000 <span>/ month</span></strong>
+              <strong class="plan-price" data-monthly-price="₦15,000" data-annual-price="₦180,000">₦15,000 <span>/ month</span></strong>
               <p>Core POS and customer workflows for small and medium-scale restaurants.</p>
               <ul class="plan-quick-list">
                 <li>5 staff</li>
                 <li>1 location</li>
                 <li>15 days trial</li>
               </ul>
-              <a class="button button-dark" href="https://goeatery.ng/restaurant-signup">Get Started</a>
+              <a class="button button-dark button-dark-muted" href="https://goeatery.ng/restaurant-signup">Get Started</a>
             </article>
             <article class="pricing-plan-card pricing-plan-card-featured">
               <span class="plan-badge">Popular</span>
@@ -338,7 +342,7 @@
                   <span class="plan-fit">Growing operations</span>
                 </div>
               </div>
-              <strong class="plan-price">₦25,000 <span>/ month</span></strong>
+              <strong class="plan-price" data-monthly-price="₦25,000" data-annual-price="₦300,000">₦25,000 <span>/ month</span></strong>
               <p>More floor, table, and staff controls for medium-to-large-scale restaurants.</p>
               <ul class="plan-quick-list">
                 <li>8 staff</li>
@@ -362,7 +366,7 @@
                   <span class="plan-fit">Multi-unit brands</span>
                 </div>
               </div>
-              <strong class="plan-price">₦45,000 <span>/ month</span></strong>
+              <strong class="plan-price" data-monthly-price="₦45,000" data-annual-price="₦540,000">₦45,000 <span>/ month</span></strong>
               <p>Advanced dispatch, hotel booking, and kitchen workflows for expanding teams.</p>
               <ul class="plan-quick-list">
                 <li>15 staff</li>

@@ -4,14 +4,40 @@ const billingOptions = document.querySelectorAll("[data-billing-option]");
 const planPrices = document.querySelectorAll("[data-monthly-price][data-annual-price]");
 const changeLogCards = document.querySelectorAll(".change-log-card");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const scrollProgress = document.createElement("div");
+const scrollTopButton = document.createElement("button");
+
+scrollProgress.className = "scroll-progress";
+scrollProgress.setAttribute("aria-hidden", "true");
+document.body.append(scrollProgress);
+
+scrollTopButton.className = "scroll-top";
+scrollTopButton.type = "button";
+scrollTopButton.textContent = "Top";
+scrollTopButton.setAttribute("aria-label", "Back to top");
+document.body.append(scrollTopButton);
 
 const updateHeaderState = () => {
   if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 12);
 };
 
-updateHeaderState();
-window.addEventListener("scroll", updateHeaderState, { passive: true });
+const updateScrollEffects = () => {
+  updateHeaderState();
+
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+  scrollProgress.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+  scrollTopButton.classList.toggle("is-visible", window.scrollY > 180);
+};
+
+updateScrollEffects();
+window.addEventListener("scroll", updateScrollEffects, { passive: true });
+window.addEventListener("resize", updateScrollEffects);
+
+scrollTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+});
 
 if (header && toggle) {
   toggle.addEventListener("click", () => {
@@ -91,7 +117,7 @@ changeLogCards.forEach((card) => {
 
 const revealItems = [
   ...document.querySelectorAll(
-    ".hero-copy, .hero-product, .proof-card, .phone-panel, .split-copy, .module-card, .dark-copy, .dark-card, .timeline-card, .workflow-foot, .pricing-card, .faq-list details, .cta-band, .privacy-hero-copy, .privacy-summary, .privacy-highlights article, .privacy-policy-intro, .privacy-policy-grid article, .privacy-contact"
+    ".hero-copy, .hero-product, .proof-card, .phone-panel, .split-copy, .module-card, .dark-copy, .dark-card, .timeline-card, .workflow-foot, .pricing-card-table, .pricing-plan-card, .faq-list details, .cta-band, .privacy-hero-copy, .privacy-summary, .privacy-highlights article, .privacy-policy-intro, .privacy-policy-grid article, .privacy-contact, .change-log-intro, .change-log-card"
   )
 ];
 

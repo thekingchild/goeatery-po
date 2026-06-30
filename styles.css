@@ -1715,8 +1715,9 @@ small,
 
 .pricing-compare {
   display: grid;
-  justify-items: center;
   gap: 14px;
+  min-width: 0;
+  justify-items: stretch;
 }
 
 .pricing-compare summary {
@@ -1732,6 +1733,7 @@ small,
   font-family: "Inter Variable", Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
+  justify-self: center;
   line-height: 1.2;
 }
 
@@ -1757,13 +1759,18 @@ small,
 
 .pricing-feature-matrix {
   overflow: auto;
+  width: 100%;
+  max-width: 100%;
   max-height: 560px;
+  min-width: 0;
   border: 1px solid rgba(16, 34, 32, 0.08);
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 20px 50px rgba(16, 34, 32, 0.06);
+  overscroll-behavior-x: contain;
   scrollbar-color: rgba(16, 34, 32, 0.32) transparent;
   scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
 }
 
 .pricing-feature-matrix::-webkit-scrollbar {
@@ -2638,6 +2645,19 @@ small,
 
   .plan-price {
     font-size: clamp(36px, 10vw, 46px);
+  }
+
+  .pricing-feature-matrix {
+    border-radius: 14px;
+  }
+
+  .feature-row {
+    grid-template-columns: minmax(150px, 1.1fr) repeat(3, minmax(118px, 0.9fr));
+    min-width: 620px;
+  }
+
+  .feature-row > span {
+    padding: 10px 12px;
   }
 
   .split-section,

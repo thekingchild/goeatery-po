@@ -1476,10 +1476,21 @@ small,
   background: #f5f5f5;
 }
 
+.pricing-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px 18px;
+  padding: 8px 0 4px;
+}
+
 .pricing-other-link {
-  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
   width: fit-content;
-  margin: 0 8px 4px 0;
+  margin: 0;
   color: #102220;
   border-bottom: 1px solid currentColor;
   font-size: 13px;
@@ -1730,9 +1741,15 @@ small,
 
 .pricing-compare {
   display: grid;
+  width: fit-content;
   gap: 14px;
   min-width: 0;
-  justify-items: stretch;
+  justify-items: center;
+}
+
+.pricing-compare[open] {
+  width: 100%;
+  flex-basis: 100%;
 }
 
 .pricing-compare summary {
@@ -1748,7 +1765,6 @@ small,
   font-family: "Inter Variable", Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
-  justify-self: center;
   line-height: 1.2;
 }
 

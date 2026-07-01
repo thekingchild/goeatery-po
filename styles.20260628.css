@@ -2014,8 +2014,7 @@ small,
 
 .pricing-page-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: 34px;
+  grid-template-columns: minmax(0, 1fr);
   align-items: stretch;
   padding: 88px 0 36px;
 }
@@ -2157,6 +2156,7 @@ small,
 }
 
 .affordable-pricing-table {
+  justify-items: center;
   background:
     radial-gradient(circle at 14% 8%, rgba(255, 209, 102, 0.16), transparent 18rem),
     radial-gradient(circle at 86% 8%, rgba(57, 207, 165, 0.14), transparent 18rem),
@@ -2164,7 +2164,9 @@ small,
 }
 
 .affordable-plan-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
+  justify-content: center;
 }
 
 .affordable-plan-card {

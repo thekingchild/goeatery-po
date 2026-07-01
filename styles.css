@@ -1476,6 +1476,21 @@ small,
   background: #f5f5f5;
 }
 
+.pricing-other-link {
+  justify-self: end;
+  width: fit-content;
+  margin: 0 8px 4px 0;
+  color: #102220;
+  border-bottom: 1px solid currentColor;
+  font-size: 13px;
+  font-weight: 760;
+  line-height: 1.2;
+}
+
+.pricing-other-link:hover {
+  color: var(--orange);
+}
+
 .billing-toggle {
   display: inline-grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1990,6 +2005,14 @@ small,
   padding: 88px 0 36px;
 }
 
+.pricing-page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 34px;
+  align-items: stretch;
+  padding: 88px 0 36px;
+}
+
 .privacy-hero-copy {
   padding: 58px;
   color: #fff;
@@ -2116,6 +2139,62 @@ small,
 .privacy-policy-grid {
   display: grid;
   gap: 14px;
+}
+
+.affordable-pricing {
+  padding-top: 28px;
+}
+
+.affordable-pricing .pricing-head {
+  margin-bottom: 42px;
+}
+
+.affordable-pricing-table {
+  background:
+    radial-gradient(circle at 14% 8%, rgba(255, 209, 102, 0.16), transparent 18rem),
+    radial-gradient(circle at 86% 8%, rgba(57, 207, 165, 0.14), transparent 18rem),
+    #f5f5f5;
+}
+
+.affordable-plan-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.affordable-plan-card {
+  grid-template-rows: auto auto auto auto 1fr auto;
+}
+
+.affordable-plan-card .plan-icon {
+  font-size: 16px;
+  letter-spacing: -0.04em;
+}
+
+.affordable-feature-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  margin: 2px 0 10px;
+}
+
+.affordable-feature-list li {
+  align-items: flex-start;
+  color: #465752;
+}
+
+.affordable-feature-list li::before {
+  margin-top: -1px;
+  background: #14ad8d;
+}
+
+.affordable-feature-list li strong {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.affordable-feature-list li.is-unavailable::before {
+  color: #d64343;
+  background: transparent;
+  font-size: 17px;
 }
 
 .privacy-policy-grid article {
@@ -2414,6 +2493,7 @@ small,
   }
 
   .privacy-hero,
+  .pricing-page-hero,
   .privacy-policy,
   .change-log-card {
     grid-template-columns: 1fr;
@@ -2498,7 +2578,8 @@ small,
     display: none;
   }
 
-  .privacy-hero {
+  .privacy-hero,
+  .pricing-page-hero {
     padding-top: 52px;
   }
 
@@ -2622,6 +2703,11 @@ small,
   .pricing-card-table {
     padding: 8px;
     border-radius: 18px;
+  }
+
+  .pricing-other-link {
+    justify-self: center;
+    margin-right: 0;
   }
 
   .pricing-plan-card {
@@ -2801,6 +2887,10 @@ small,
   .privacy-policy-grid article,
   .privacy-contact {
     padding: 24px;
+  }
+
+  .affordable-feature-list {
+    grid-template-columns: 1fr;
   }
 
   .privacy-policy {

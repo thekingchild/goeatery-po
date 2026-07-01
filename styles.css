@@ -1477,8 +1477,8 @@ small,
 }
 
 .pricing-card-actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto;
   align-items: flex-start;
   justify-content: center;
   gap: 12px 18px;
@@ -1740,16 +1740,7 @@ small,
 }
 
 .pricing-compare {
-  display: grid;
-  width: fit-content;
-  gap: 14px;
-  min-width: 0;
-  justify-items: center;
-}
-
-.pricing-compare[open] {
-  width: 100%;
-  flex-basis: 100%;
+  display: contents;
 }
 
 .pricing-compare summary {
@@ -1766,6 +1757,11 @@ small,
   font-size: 13px;
   font-weight: 600;
   line-height: 1.2;
+}
+
+.pricing-card-actions .pricing-feature-matrix {
+  grid-column: 1 / -1;
+  margin-top: 0;
 }
 
 .pricing-compare summary::-webkit-details-marker {

@@ -2179,16 +2179,12 @@ small,
 
 .affordable-pricing-table {
   justify-items: center;
-  background:
-    radial-gradient(circle at 14% 8%, rgba(255, 209, 102, 0.16), transparent 18rem),
-    radial-gradient(circle at 86% 8%, rgba(57, 207, 165, 0.14), transparent 18rem),
-    #f5f5f5;
+  background: #f5f5f5;
 }
 
 .affordable-plan-grid {
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
-  justify-content: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .affordable-plan-card {

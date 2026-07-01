@@ -93,6 +93,10 @@
         </div>
 
         <div class="pricing-card-table affordable-pricing-table">
+          <div class="billing-toggle" role="radiogroup" aria-label="Billing period">
+            <button class="billing-toggle-option is-active" type="button" role="radio" aria-checked="true" data-billing-option="monthly">Monthly</button>
+            <button class="billing-toggle-option" type="button" role="radio" aria-checked="false" data-billing-option="annual">Annual</button>
+          </div>
           <div class="pricing-plan-grid affordable-plan-grid" aria-label="GoEatery affordable plan summaries">
             <article class="pricing-plan-card affordable-plan-card">
               <div class="plan-title-row">
@@ -102,7 +106,7 @@
                   <span class="plan-fit">Starter service volume</span>
                 </div>
               </div>
-              <strong class="plan-price">&#8358;4,200 <span>/ month</span></strong>
+              <strong class="plan-price" data-monthly-price="&#8358;4,200" data-annual-price="&#8358;50,400">&#8358;4,200 <span>/ month</span></strong>
               <p>For compact food businesses that need core tools and up to 20 orders per day.</p>
               <ul class="plan-quick-list">
                 <li>20 orders per day</li>
@@ -148,7 +152,7 @@
                   <span class="plan-fit">Busier small teams</span>
                 </div>
               </div>
-              <strong class="plan-price">&#8358;10,000 <span>/ month</span></strong>
+              <strong class="plan-price" data-monthly-price="&#8358;10,000" data-annual-price="&#8358;120,000">&#8358;10,000 <span>/ month</span></strong>
               <p>For growing restaurants that need table and area controls plus up to 50 orders per day.</p>
               <ul class="plan-quick-list">
                 <li>50 orders per day</li>
@@ -194,7 +198,7 @@
                   <span class="plan-fit">High-demand small teams</span>
                 </div>
               </div>
-              <strong class="plan-price">&#8358;12,500 <span>/ month</span></strong>
+              <strong class="plan-price" data-monthly-price="&#8358;12,500" data-annual-price="&#8358;150,000">&#8358;12,500 <span>/ month</span></strong>
               <p>For growing restaurants that need higher order volume, more staff access, and waiter requests.</p>
               <ul class="plan-quick-list">
                 <li>80 orders per day</li>

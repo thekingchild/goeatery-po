@@ -1478,14 +1478,16 @@ small,
 
 .pricing-card-actions {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: minmax(0, 1fr) auto auto minmax(0, 1fr);
   align-items: center;
   justify-content: center;
   gap: 14px 12px;
+  min-width: 0;
   padding: 10px 0 2px;
 }
 
 .pricing-other-link {
+  grid-column: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1752,6 +1754,10 @@ small,
   display: contents;
 }
 
+.pricing-card-actions .pricing-compare summary {
+  grid-column: 3;
+}
+
 .pricing-compare summary {
   display: inline-flex;
   align-items: center;
@@ -1771,6 +1777,7 @@ small,
 
 .pricing-card-actions .pricing-feature-matrix {
   grid-column: 1 / -1;
+  width: 100%;
   margin-top: 0;
 }
 
@@ -2750,6 +2757,17 @@ small,
   .pricing-card-table {
     padding: 8px;
     border-radius: 18px;
+  }
+
+  .pricing-card-actions {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .pricing-other-link,
+  .pricing-card-actions .pricing-compare summary,
+  .pricing-card-actions .pricing-feature-matrix {
+    grid-column: 1;
   }
 
   .pricing-other-link {

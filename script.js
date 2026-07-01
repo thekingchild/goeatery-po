@@ -85,6 +85,25 @@ billingOptions.forEach((option) => {
   });
 });
 
+document.querySelectorAll(".pricing-compare").forEach((drawer) => {
+  drawer.addEventListener("toggle", () => {
+    if (!drawer.open) return;
+
+    window.requestAnimationFrame(() => {
+      const pricingTable = drawer.closest(".pricing-card-table");
+      if (!pricingTable) return;
+
+      const headerOffset = (header?.getBoundingClientRect().height || 76) + 18;
+      const tableRect = pricingTable.getBoundingClientRect();
+      const targetTop = Math.max(window.scrollY + tableRect.top - headerOffset, 0);
+
+      if (tableRect.top < headerOffset || tableRect.top > window.innerHeight * 0.22) {
+        window.scrollTo({ top: targetTop, behavior: reducedMotion ? "auto" : "smooth" });
+      }
+    });
+  });
+});
+
 changeLogCards.forEach((card) => {
   const version = card.querySelector(".change-log-meta strong")?.textContent?.trim() || "release";
   const title = card.querySelector("h3")?.textContent?.trim() || "release notes";

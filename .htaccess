@@ -2,15 +2,24 @@ Options -Indexes
 
 DirectoryIndex index.html
 
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /home/
+  
+  # ── 1. Redirect /index or /index.html → root / ─────────────────────────
+  RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
+  RewriteRule ^ / [R=301,L,NE]
 
-  RewriteRule ^index\.html$ - [L]
+  # ── 2. Canonical redirect: strip .html from all other URLs ─────────────
+  # /contact.html → 301 permanent redirect to /contact
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L,NE]
 
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+  # ── 3. Internally serve the .html file for clean URLs ──────────────────
+  # /contact → serves contact.html transparently (no redirect loop)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
 
-  RewriteRule ^.*$ index.html [L]
 </IfModule>
